@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+        }
+
+        #div2 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: goldenrod;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h2 id="header">Changing HTML Style</h2>
+
+    <button onclick="changeStyle()">Make a change!</button>
+    <div id="div1"></div>
+
+    <script>
+        // variable defined outside functions is a global variable
+        // which is accessible by functions
+        var square = true;
+        var counter = 200;
+        var color = "ff0000";
+        
+        function changeStyle() {
+            document.getElementById("header").style.color = "#" + color;
+           
+            if (square) {
+                var div = document.getElementById("div1");
+                div.id = "div2";
+                document.getElementById("div2").style.width = counter + "px";
+                document.getElementById("div2").style.height = counter + "px";        
+                square = false;
+                color = "000000";
+            } else {
+                var div = document.getElementById("div2");
+                div.id = "div1";
+                document.getElementById("div1").style.width = counter + "px";
+                document.getElementById("div1").style.height = counter + "px";
+                square = true;
+                color = "ff0000";
+            }
+            counter = counter - 10;
+            if (counter < 10)
+                    counter = 200;
+            
+        }
+      
+
+    </script>
+
+</body>
+</html>

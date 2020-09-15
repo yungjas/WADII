@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model 3</title>
+
+    <style>
+        div.one{
+            border: 3px solid black;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            margin-right: 150px;
+            margin-left: 90px;
+            background-color: yellow;
+        }
+
+        div.two{
+            border: 3px solid red;
+            background-color: aqua;
+            /* margin: top right bottom left (in this order) */
+            margin: 100px 150px 50px 90px
+        }
+
+        div.three{
+            border: 5px solid green;
+            background-color: grey;
+            /* margin of top right bottom and left is 20px */
+            margin: 20px;
+            
+            /* format similar to margin */
+            padding: 50px 30px 50px 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading 1</h1>
+
+    <!-- Putting margin around the div -->
+    <div class="one">
+        Div 1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit nostrum delectus, ullam molestiae amet voluptatum commodi exercitationem. Harum hic repellat, nisi alias consequuntur debitis saepe maiores cupiditate aperiam cum laboriosam?
+    </div>
+
+    <div class="two">
+        Div 2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit nostrum delectus, ullam molestiae amet voluptatum commodi exercitationem. Harum hic repellat, nisi alias consequuntur debitis saepe maiores cupiditate aperiam cum laboriosam?
+    </div>
+
+    <div class="three">
+        Div 3. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit nostrum delectus, ullam molestiae amet voluptatum commodi exercitationem. Harum hic repellat, nisi alias consequuntur debitis saepe maiores cupiditate aperiam cum laboriosam?
+    </div>
+</body>
+</html>

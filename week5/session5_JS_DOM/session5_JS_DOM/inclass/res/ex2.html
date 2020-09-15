@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        
+       // add your form validation code here
+       function validateForm(){
+            msg = "";
+
+            //id length validation
+            var id = document.forms["form"]["id"].value;
+            if(id.length > 10){
+                msg += "ID can only contain a maximum of 10 characters\n";
+            }
+
+            //email validation
+            var email = document.forms["form"]["email"].value;
+
+            if(!email.includes("@")){
+                msg += "Email must contain @\n";
+            }
+
+            //age validation
+            var age = document.forms["form"]["age"].value;
+
+            if(age < 10 || age > 40){
+                msg += "Age must be between 10 and 40\n";
+            }
+
+            //password not empty validation
+            var pwd = document.forms["form"]["password"].value;
+
+            if(pwd == ""){
+                msg += "Password must not be empty";
+            }
+
+            if(msg != ""){
+                alert(msg);
+                return false
+            }
+            else{
+                return true;
+            }
+       }
+
+    </script>
+</head>
+<body>
+    
+    <h2>Form Validation</h2>
+
+    <form name="form" action="#" onsubmit="return validateForm()" autocomplete="on" >
+            ID: <input type="text" name="id" ><br>
+            Age: <input type="number" name="age" ><br>
+            Email: <input type="text" name="email" ><br>
+            Password: <input type="password" name="password" ><br>
+            <input type="submit" value="Submit"><br>
+    </form>
+
+</body>
+</html>

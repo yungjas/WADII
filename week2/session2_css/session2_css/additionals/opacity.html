@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    img {
+        opacity: 0.5;
+        filter: alpha(opacity=50); /* For IE8 and earlier */
+    }
+    .opaq {
+        opacity: 0.4;
+        background-color: yellow;
+        width: 200px;
+        height: 200px;
+    }
+</style>
+</head>
+<body>
+
+    <h1>Image Transparency</h1>
+    <p>The opacity property specifies the transparency of an element. The lower the value, the more transparent:</p>
+
+    <p>Image with 50% opacity:</p>
+    <img src="./img/kakashi.jpg" alt="kakashi" width="200" height="auto">
+
+    <p>Division with 40% opacity</p>
+    <div class="opaq"></div>
+
+</body>
+</html>

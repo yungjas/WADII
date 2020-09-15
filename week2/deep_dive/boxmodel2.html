@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model 2</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* all para elements that belongs to class one */
+        p.one{
+            border-style: solid;
+            border-width: 5px;
+            border-color: blue;
+            border-radius: 5px;
+        }
+
+        p.two{
+            border-style: solid;
+            border-width: medium;
+            border-color: red;
+            border-radius: 10px;
+        }
+
+        p.three{
+            border-style: solid;
+            border-width: 5px;
+            border-color: green;
+            border-radius: 12px;
+        }
+
+        p.four{
+            border-style: dotted;
+            border-width: thick;
+            border-color: pink;
+        }
+
+        p.five{
+            /* border style is required. otherwise if you just put border-width as 10px the border will not show up */
+            border: 10px solid blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="one">Heading 1</h1>
+
+    <p class="one">
+        Para 1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores ullam explicabo est dicta aperiam perspiciatis repellendus reprehenderit qui rem eaque. Temporibus debitis omnis, assumenda ab nobis dolorum obcaecati officia ex?
+    </p>
+
+    <p class="two">
+        Para 2. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores ullam explicabo est dicta aperiam perspiciatis repellendus reprehenderit qui rem eaque. Temporibus debitis omnis, assumenda ab nobis dolorum obcaecati officia ex?
+    </p>
+
+    <p class="three">
+        Para 3. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores ullam explicabo est dicta aperiam perspiciatis repellendus reprehenderit qui rem eaque. Temporibus debitis omnis, assumenda ab nobis dolorum obcaecati officia ex?
+    </p>
+
+    <p class="four">
+        Para 4. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores ullam explicabo est dicta aperiam perspiciatis repellendus reprehenderit qui rem eaque. Temporibus debitis omnis, assumenda ab nobis dolorum obcaecati officia ex?
+    </p>
+
+    <p class="five">
+        Para 5. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores ullam explicabo est dicta aperiam perspiciatis repellendus reprehenderit qui rem eaque. Temporibus debitis omnis, assumenda ab nobis dolorum obcaecati officia ex?
+    </p>
+</body>
+</html>

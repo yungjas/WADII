@@ -1,0 +1,119 @@
+/* DO NOT MODIFY THE FIRST 2 LINES OF <body> declaration block.
+   You can ADD more CSS script below the 2 lines.
+*/
+body {
+    margin: 0;
+    padding: 0;
+    /* You can add more CSS script below */
+    background-color: #ffdfff;
+}
+
+/* Add your CSS script below */
+#main-header{
+    background-color: yellow;
+    color: blue;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: auto;
+}
+
+#main-header h1{
+    margin-left: 50px;
+}
+
+#navigation-bar{
+    width: auto;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 3px;
+    background-color: grey;
+}
+
+#navigation-bar ul{
+    margin-left: 10px;
+}
+
+#navigation-bar li{
+    display: inline;
+    /* margin-left: 10px; */
+}
+
+#navigation-bar li a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+}
+
+#top-content{
+    background-image: url("../images/hyunbin_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: auto auto;
+    background-color: burlywood;
+    vertical-align: top;
+    padding: 5em;
+}
+
+#top-content h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 2em;
+    line-height: 1.6;
+    height: auto;
+}
+
+#main-content-style{
+    padding: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: auto;
+    margin-bottom: 15em;
+}
+
+#main-content{
+    float: left;
+    width: 50%;
+}
+
+#main-content p{
+    line-height: 1.6;
+}
+
+#side-bar{
+    background-color: green;
+    color: white;
+    float: right;
+    width: 30%;
+    vertical-align: top;
+    padding: 10px;
+    margin-right: 1em;
+    height: auto;
+}
+
+#side-bar p{
+    font-size: small;
+    line-height: 1.6;
+}
+
+#main-footer{
+    background-color: rgb(65, 64, 64);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+/* DO NOT MODIFY THIS */
+@media(max-width: 600px) {
+    #main-content {
+        width: 100%;
+        float: none;
+    }
+
+    #side-bar {
+        width: 100%;
+        float: none;
+    }
+}

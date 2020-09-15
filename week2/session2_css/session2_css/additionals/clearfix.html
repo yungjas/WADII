@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .float {
+           float: right; 
+        }
+
+        .d2 {
+            border: 1px solid rgb(1, 66, 66);
+        }
+
+        .d3 {
+            
+            border: 1px solid rgb(1, 66, 66);
+        }
+
+        .clearfix {
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Clearfix Property</h2>
+
+    <div class="d2">
+        <h2>Without Clearfix</h2>
+        <img src="./img/naruto1.jpg" class="float">
+        There are many variations of passages of Lorem Ipsum available, 
+            but the majority have suffered alteration in some form, by injected humour, 
+            or randomised words which don't look even slightly believable. 
+    </div>
+
+    <p style="clear:right">
+        Add the clearfix hack to the containing element, to fix this problem
+    </p>
+
+    <div class="d3 clearfix">
+        <h2>With Clearfix</h2>
+        <img src="./img/naruto1.jpg" class="float">
+        There are many variations of passages of Lorem Ipsum available, 
+        but the majority have suffered alteration in some form, by injected humour, 
+        or randomised words which don't look even slightly believable. 
+    </div>   
+
+</body>
+</html>

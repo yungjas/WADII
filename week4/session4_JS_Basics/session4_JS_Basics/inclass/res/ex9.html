@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome</title>
+</head>
+<body>
+
+	<script>
+       // add your code here
+       var palindrome = false;
+
+	   var str = prompt("Please enter a string");
+
+	   //convert it to lowercase
+	   str = str.toLowerCase();
+
+	   //remove all spaces
+	   str = str.replace(" ", "");
+
+	   //strArray contains individual char in an array format
+	   var strArray = str.split("");
+
+	   var strArrayReverse = str.split("");
+	   strArrayReverse.reverse();
+
+	   console.log(strArrayReverse);
+	   console.log(strArray);
+
+	   for(var i = 0; i < strArray.length; i++){
+		   if(strArray[i] == strArrayReverse[i]){
+				palindrome = true;
+		   }
+		   else{
+			   palindrome = false;
+		   }
+	   }
+
+	   if(palindrome == true){
+		   alert("This string is a palindrome");
+	   }
+	   else{
+		   alert("This string is not a palindrome")
+	   }
+
+	</script>
+</body>
+</html>

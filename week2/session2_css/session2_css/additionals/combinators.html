@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* descendants selector */
+        div p {
+            background-color: blue;
+        }
+
+        /* immediate child (subset of descendants) */
+        div > p {
+            background-color: green;
+        }
+
+        /* adjacent select, immediately following elements */
+        div + p {
+            background-color: yellow;
+        }
+
+        /* general siblings (siblings all around the specified element */
+        /* this has more priority than adjacent selector above */
+        div ~ p {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Initial Paragraph </p>
+
+    <div>
+        <p>Paragraph 1 in the div.</p>
+        <label>Some nice labels</label>
+        <p>Paragraph 2 in the div.</p>
+        <section><p>Paragraph 3 in the div.</p></section>
+    </div>
+    
+    <p>Paragraph 4. after a div.</p>
+    <label>Some labels</label>
+    <p>Paragraph 5. Not in a div.</p>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #div1 {
+                width: 200px;
+                height: 200px;
+                background-color: goldenrod;
+            }
+        </style>
+    </head>
+<body>
+
+    <div id="div1">
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+       
+    </div>
+
+    <button onclick="add()">Add a paragraph!</button>
+    <button onclick="remove()">Remove a paragraph!</button>
+    <button onclick="removeAll()">Remove all paragraphs!</button>
+    <br><br>
+    <button onclick="addToBody()">Add a paragraph in document body!</button>
+    <button onclick="removeFromBody()">Remove the paragraph from document body!</button>
+    <script>
+        var counter = 1;
+        function add() {
+            var para = document.createElement("p");
+            
+            para.id = "p" + counter; // set id attribute
+            counter++;
+
+            var node = document.createTextNode("This is a new one.");
+
+            para.appendChild(node);
+            var element = document.getElementById("div1");
+            element.appendChild(para);
+        }
+
+        function remove() {
+            // var e = document.getElementById("div1").lastElementChild;
+            // console.log(e);
+            document.getElementById("div1").lastElementChild.remove();
+        }
+
+        function removeAll() {    
+            var div1 =  document.getElementById("div1");
+            var children = div1.children;  // -> get all child nodes of div1     
+            var len = children.length;
+            console.log(len);
+            for (let i=0; i<len; i++) {
+                console.log(children[0]);
+                // can't use the index, children[i], since the children array is 
+                // affected as the element is removed      
+                children[0].remove(); 
+            }   
+        }
+
+        function addToBody() {
+            var para = document.createElement("p");
+            var node = document.createTextNode("This is a new one.");
+            para.appendChild(node);
+            // append the new node into document body
+            var b = document.body; // -> this accesses the whole HTML document body as an element object
+            b.appendChild(para);
+        }
+
+        function removeFromBody() {
+            // console.log(document.body.lastElementChild);
+            document.body.lastElementChild.remove();
+        }
+
+    
+    </script>
+
+</body>
+</html>

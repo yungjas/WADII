@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Array Operations</title>
+    <script>
+        function showSchools() {
+            document.getElementById("arr").innerHTML = schools;
+            document.getElementById("list").innerHTML = schoolList;
+        }
+    </script>
+</head>
+<body>
+
+    <p id="arr"></p>
+    <p id="list"></p>
+    <button name="finalArray" onclick="showSchools()">Final list of schools!</button>
+
+	<script>
+        var schools = ["SIS", "SOA", "SOL"];
+        document.getElementById("arr").innerHTML = schools;
+
+        schools.push("SOSS");
+        console.log("After push: " + schools); // SIS,SOA,SOL,SOSS
+
+        schools.pop();
+        console.log("After pop: " + schools); // SIS,SOA,SOL
+
+        var sis = schools.shift();
+        console.log("After shift: " + schools); // SOA,SOL
+        console.log("sis: "+ sis); // SIS
+
+        var len = schools.unshift("SOSS");
+        console.log("After unshift: " + schools); // SOSS,SOA,SOL
+        console.log("Array length: " + len); // 3
+
+        // insert two elements starting at index 1
+        // remove one element (starting at index 1)
+        // return the deleted element(s)
+        var soa = schools.splice(1,1,"SIS","SOE");
+        console.log("After splice: "+ schools); // SOSS,SIS,SOE,SOL
+        console.log("soa: "+ soa);
+
+        // slice -- is copy by value method
+        // while the above methods modify the original array,
+        // slice produces a new array
+        var newSchools = schools.slice(1,3);
+        console.log("After slice: " + newSchools); // SIS,SOE
+
+        newSchools = schools.slice(2);
+        console.log("After slice again: " + newSchools); // SOE,SOL
+
+        // cloning an array
+        var brandNewSchools = [...schools];
+        console.log("Cloned Schools: " + brandNewSchools); // SOSS,SIS,SOE,SOL
+
+        // sort and reverse
+        console.log("After sort: " + brandNewSchools.sort()); // SIS,SOE,SOL,SOSS
+        console.log("After reverse: " + brandNewSchools.reverse()); // SOSS,SOL,SOE,SIS
+
+
+       /*  var len, schoolList, i;
+        len = schools.length;
+        schoolList = "<ul>";
+        for (i = 0; i < len; i++) {  
+            schoolList += "<li>" + schools[i] + "</li>";
+        }
+        schoolList += "</ul>"; */
+
+        var schoolList = "<ul>";
+        for (var school of schools) {
+            schoolList += "<li>" + school + "</li>";
+        }
+        schoolList += "</ul>";
+
+    </script>
+    
+   
+</body>
+</html>

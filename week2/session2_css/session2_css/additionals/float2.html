@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .d1 {
+           float: left; 
+        }
+
+        .d2 {
+            /* margin has to be measured from the window edge
+            since the image has been floated and is to be ignored */
+            position: relative;
+            padding-left: 170px; 
+            padding-top: 30px;
+        }
+
+        .clear {
+            clear: left;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Float and Clear Properties</h2>
+    <div class="d1">
+        <img src="./img/naruto1.jpg" width="150" height="auto">
+    </div> 
+    
+    <div class="d2">
+        Name: Naruto <br>
+        Age: 14 
+    </div>
+   
+
+    <div class="clear"></div>
+
+    <div class="d1">
+        <img src="./img/kakashi.jpg" width="150" height="auto">
+    </div>
+
+    <div class="d2">
+        Name: Kakashi <br>
+        Age: 30
+    </div>
+   
+    
+    <div class="clear"></div>
+</body>
+</html>

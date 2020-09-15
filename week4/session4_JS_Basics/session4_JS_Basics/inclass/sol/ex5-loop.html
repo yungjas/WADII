@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript loop</title>
+</head>
+<body>
+
+	<script>
+        var input = prompt("Please provide a string");
+        var idx = 0;
+        var found = false;
+        for (var c of input) {
+            if (c == "@") {
+                found = true;
+                break;
+            }
+            idx++;
+        }
+
+        if (found) {
+            alert("Found @ at index: "+ idx);
+        } else {
+            alert("Character not found!");
+        }
+       
+       
+
+	</script>
+</body>
+</html>

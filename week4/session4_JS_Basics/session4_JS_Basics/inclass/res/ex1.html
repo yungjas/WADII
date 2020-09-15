@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+
+	<p id="P1">Hello World!</p>
+
+	<button id="button" onclick="showme()">Cheat!</button>
+
+	<script>
+        function showme() {
+            // Evaluate what answers you would get if you ran this in the
+            // Javascript Console in Google Chrome. 
+
+            // you can use console.log() for debugging
+            // view the log output in Chrome -> right click -> inspect -> console
+            console.log(5 + "34"); // "534"
+            
+            // add your code here
+            console.log(typeof("" + 0));
+
+            //treat true as 1 and false as 0
+            //1 + 0 = 1
+            console.log(true + false);
+            //0 + 1 =1
+            console.log(false + true);
+            //0 - 1 = -1
+            console.log(false - true);
+
+            //NaN, you can't minus a string
+            console.log("Bob" - "bill");
+
+            //can't compare strings like this
+            console.log("B" > "C");
+
+            //same type (boolean) but different value
+            console.log(true === false);
+
+            console.log("STREAM CRIMINAL");
+        }
+	</script>
+</body>
+</html>

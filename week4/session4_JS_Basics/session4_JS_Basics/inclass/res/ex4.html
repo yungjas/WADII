@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript loop</title>
+</head>
+<body>
+
+    <p id="person"></p>
+
+	<script>
+        var n = "";
+        var a = "";
+
+        var persons = [ 
+            {name: "The Forgotten One", age: 50},
+            {name: "The Special One", age: 55},
+            {name: "The Happy One", age: 58},
+            {name: "The Babyface One", age: 48},
+            {name: "The Chosen One", age: 52}
+        ]
+
+        // add code here
+       for(person of persons){
+           for(prop in person){
+               //to access all properties within an object use [prop]
+               //to access a specific property within an object eg name using ["name"]
+               if(person["name"] == "The Chosen One"){
+                   n = person["name"];
+                   a = person["age"];
+                   //exit the loop once the chosen one is found
+                   break;
+               }
+           }
+       }
+
+       console.log("Name: " + n);
+       console.log("Age: " + a);
+    
+	</script>
+</body>
+</html>

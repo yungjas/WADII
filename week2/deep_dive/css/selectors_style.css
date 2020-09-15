@@ -1,0 +1,39 @@
+/* class to apply styling to multiple elements */
+/* id to apply styling to one element */
+
+/* h1 is a selector */
+h1{
+    background-color: black;
+    color: white;
+}
+
+/* applying styling to class */
+.cool{
+    background-color: aqua;
+}
+
+.warm{
+    background-color: yellow;
+}
+
+/* applying styling to id */
+#blah{
+    background-color: pink;
+}
+
+.dotted{
+    border-style: dotted;
+}
+
+.solid{
+    border-style: solid;
+}
+
+.inset{
+    border-style: inset;
+}
+
+.haha{
+    text-align: center;
+    color: green;
+}

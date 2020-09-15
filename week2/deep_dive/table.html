@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 400px;
+        }
+        
+        th, td{
+            /* only puts border at the bottom of the table */
+            border-bottom: 1px solid grey;
+        }
+
+        th:hover{
+            background-color: pink;
+        }
+
+        /* only want even number rows to be yellow */
+        tr:nth-child(even){
+            background-color: yellow;
+        }
+
+        /* th{
+            height: 50px;
+            background-color: pink;
+        }
+
+        td{
+            text-align: center;
+            height: 40px;
+            vertical-align: bottom;
+            background-color: yellow;
+        }
+
+        th, td{
+            padding: 10px;
+        } */
+    </style>
+</head>
+<body>
+    <h1>Table</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+        </tr>
+
+        <tr>
+            <td>111</td>
+            <td>Taemin</td>
+            <td>Male</td>
+        </tr>
+
+        <tr>
+            <td>222</td>
+            <td>Taemin 2</td>
+            <td>Male</td>
+        </tr>
+
+        <tr>
+            <td>333</td>
+            <td>LE</td>
+            <td>Female</td>
+        </tr>
+    </table>
+</body>
+</html>

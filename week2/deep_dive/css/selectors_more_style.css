@@ -1,0 +1,26 @@
+/* this applies to all h1 elements under div -> descendant selector */
+/* div h1{
+    color: blue;
+    background-color: pink;
+    font-style: italic;
+} */
+
+/* this applies to all h1 elements WHOSE PARENT is div -> descendant selector */
+div > h1{
+    color: blue;
+    background-color: pink;
+    font-style: italic;
+}
+
+/* para elements falling under the class second */
+/* .second p{
+    background-color: yellow;
+    color: red;
+    font-size: 16px;
+} */
+
+.second > p{
+    background-color: yellow;
+    color: red;
+    font-size: 16px;
+}

@@ -1,0 +1,54 @@
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table{
+    width: 80%
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2{
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 15px;
+}
+
+th.first{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+    padding: 5px;
+}
+
+th.rest{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 10%;
+    padding: 5px;
+    font-size: 15px;
+}
+
+td{
+    padding: 5px;
+}
+
+.boldfont{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.red{
+    background-color: #FFC8C8;
+}
+
+.green{
+    background-color: #BEFEEB;
+}

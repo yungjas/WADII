@@ -1,0 +1,255 @@
+<html>
+<head>
+    <title>Jasmine - Challenge 1</title>
+
+    <!-- Internal CSS styling -->
+    <style>
+
+        /* DO NOT MODIFY THIS */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add your CSS script below */
+        body{
+            background-image: url("images/justin_bg.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .header-box{
+            background-color: black;
+            border-top: 5px dotted blue;
+            border-bottom: 5px dotted blue;
+            border-left: 5px solid blue;
+            border-right: 5px solid blue;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 20px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .header-box h1{
+            text-decoration: underline;
+            font-style: italic;
+            letter-spacing: 10px;
+            word-spacing: 15px;
+            margin-bottom: 10px;
+        }
+
+        .header-box p{
+            line-height: 1.6;
+        }
+
+        .middle-box{
+            background-color: yellow;
+            border: 10px dotted red;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+            padding: 9px;
+        }
+
+        .middle-box h1{
+            border: 5px dotted blue;
+            background-color: pink;
+            text-align: center;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 70%;
+            margin: auto;
+        }
+
+        .middle-box p{
+            margin-top: 10px;
+            padding: 5px;
+            line-height: 1.6;
+        }
+
+        .middle-link{
+            background-color: aqua;
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .middle-link a{
+            color: darkorange;
+            text-decoration: none;
+        }
+
+        .middle-link a:hover{
+            background-color: yellow;
+            color: blue;
+        }
+
+        .bottom-box{
+            background-color: rgb(21, 199, 21);
+            border: 5px solid green;
+            border-radius: 13px;
+            width: 80%;
+            margin: auto;
+            padding: 9px;
+        }
+
+        .bottom-box h2{
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .bottom-box ul{
+            list-style-image: url("./images/justin_list_button.png");
+            list-style-position: inside;
+        }
+
+        .bottom-box li{
+            border-bottom: 3px dotted black;
+            margin-bottom: 10px;
+            padding: 0 10px;
+        }
+
+        #single{
+            font-style: italic;
+            color: red;
+            text-decoration: line-through;
+        }
+
+        #married{
+            color: blue;
+            font-weight: bold;
+        }
+
+        .love-box{
+            border: 5px solid purple;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding: 15px;
+            width: 80%
+        }
+
+        .love-box h2{
+            border: 5px dotted palevioletred;
+            background-color: pink;
+            text-align: center;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        .form-field{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px;
+        }
+
+        .love-box label{
+            display: block;
+        }
+
+        input[type=text], textarea{
+            width: 80%;
+            display: block;
+        }
+
+        input[type=submit]{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            margin-left: 5px;
+            margin-top: 15px;
+        }
+
+        .footer-box{
+            background-color: grey;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+    <!-- <link rel="stylesheet" type="text/css" href="./css/style.css"> -->
+</head>
+<body>
+
+    <!--
+        DO NOT MODIFY the baseline HTML script given to you!
+        For example,
+        - Do NOT change 'class' names
+        - Do NOT change the HTML structure (don't shift elements around)
+    -->
+
+    <div class="outer-box">
+
+        <div class="header-box">
+            <h1>Justin Bieber</h1>
+            <p>
+                Justin Drew Bieber is a Canadian singer and songwriter. Discovered at age 13 by talent manager Scooter Braun after he had watched his YouTube cover song videos, Bieber was signed to RBMG Records in 2008. 
+            </p>
+        </div>
+
+
+        <div class="middle-box">
+            <h1>Early Life</h1>
+            <p>
+                Bieber was born on March 1, 1994, in London, Ontario, at St Joseph's Hospital, and was raised in Stratford, Ontario. He is the only child of Jeremy Jack Bieber and Pattie Mallette, who were never married. Mallette's mother Diane and stepfather Bruce helped her raise her son. Bieber's ancestry includes French-Canadian, Irish, English, Scottish, and German.
+            </p>
+
+            <p class="middle-link">
+                For more information, visit <a href="https://en.wikipedia.org/wiki/Justin_Bieber" target="_blank">this Wiki page</a> and read!
+            </p>
+        </div>
+
+        <div class="bottom-box">
+            <h2>Describe Justin</h2>
+            <ul>
+                <li>Talented</li>
+                <li>Handsome</li>
+                <li>He is <span id="single">single</span> <span id="married">married</span></li>
+            </ul>
+        </div>
+
+        <div class="love-box">
+            <h2>Send My Love</h2>
+            
+            <form>
+
+                <div class="form-field">
+                    <label>Name: </label>
+                    <input type="text" name="myname">
+                </div>
+
+                <div class="form-field">
+                    <label>Email: </label>
+                    <input type="text" name="email">
+                </div>
+
+                <div class="form-field">
+                    <label>Love Letter:</label>
+                    <textarea name="loveletter"></textarea>
+                </div>
+
+                <input type="submit" class="button" value="Send My Love">
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-box">
+        <p>
+            Copyright &copy; Jasmine Lim Hui Shan
+        </p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript String Operations</title>
+</head>
+<body>
+
+    <p id="school"></p>
+
+	<script>
+        var schools = "SOA, SIS, SOL";
+
+        var str = schools.slice(5,8); // SIS
+        console.log(str);
+        // document.getElementById("school").innerHTML = sis;
+
+        str = schools.slice(5); // SIS, SOL
+        console.log(str);
+
+        str = schools.substr(5, 3); // SIS
+        console.log(str);
+
+        str = schools.substr(5); // SIS, SOL
+        console.log(str);
+
+        var str1 = "IS216 is an awesome IS course!";
+        var str2 = str1.replace("IS216", "CS216");
+        console.log(str2);
+        var str3 = str1.replace(/IS/g, "CS");
+        console.log(str3);
+
+        var str = "a,b,c,d,e"; 
+        var arr = str.split(",");
+        console.log(arr);
+
+        // this does not work
+        // var x = "We are the so-called "Vikings" from the north"
+
+        // use backslash escape character \ for special characters like ', ", \
+        var x = "We are the so-called \"Vikings\" from the north";
+        console.log(x);
+
+	</script>
+</body>
+</html>

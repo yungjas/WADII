@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript loop</title>
+</head>
+<body>
+
+	<script>
+        /*
+        Write a JavaScript program that prompts the user to enter a string
+        Loop through the entered string using for ... of  and check if the string contains the character ‘@’ 
+        If yes, alert the user with the index of ‘@’ in the entered string
+        Otherwise, alert the user “character not found!”
+        */
+        var str = prompt("Please provide a string");
+        var index = 0;
+        var found = false;
+
+        for(s of str){
+                if(s == "@"){
+                        index = str.indexOf("@");
+                        found = true;
+                        //exit loop once @ is found
+                        break;
+                }
+        }
+
+        if(found == true){
+                alert("Found @ at index: " + index);
+        }
+        else{
+                alert("Character not found!");
+        }
+       
+	</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript</title>
+    <style>
+        .demo {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+        <!-- getElementByID -->
+        <p id="demo">Hello!</p>
+        <a id="link" href="ex1.html">exercises!</a>
+        <button onclick="props_methods()">Click Me!</button>
+        <script>
+            function props_methods() {
+                var y =  document.getElementById("demo");
+                console.log("TagName: " + y.tagName); // -> P
+                console.log("NodeName: " +y.nodeName); // -> P
+                console.log("NodeType: " +y.nodeType); // -> 1
+                // console.log("NodeValue: " +y.nodeValue); // -> null
+                // console.log(y.toString())
+                console.log("TextContent: " + y.textContent); // -> Hello!
+                console.log("innerHTML: " + y.innerHTML); // -> Hello!
+                console.log("innerText: " + y.innerText); // -> Hello!
+                y.style.color = "red";
+
+                var a = document.getElementById("link");
+                a.setAttribute("href", "ex2.html"); // --> href="ex2.html"
+
+                var styleNode = document.createAttribute("class");
+                styleNode.value = "demo";
+                a.setAttributeNode(styleNode);
+            }
+        </script>
+
+       
+
+        <!-- getElementsByClassName -->
+        <p class="hello">Hello World!</p>
+
+        <p class="hello"></p>
+
+        <button onclick="sayHello()">Say Hello!</button>
+        
+        <script>
+            function sayHello() {
+                var x = document.getElementsByClassName("hello");
+                console.log(x.length); // -> 2
+                console.log(x[0].outerHTML); // -> <p class="hello">Hello World!</p>
+                console.log(x[0].value); // -> undefined (value property is usually used with <input> elements)
+                x[1].innerHTML = "Hello World!";
+            }
+         
+        </script>
+        <br><br>
+
+        <!-- getElementsByTagName -->
+        First Name: <input name="fname" type="text" ><br>
+        Last Name: <input name="lname" type="text" ><br>
+
+        <button onclick="displayName()">Display Name!</button>
+
+        <p id="name"></p>
+
+        <script>
+            function displayName() {
+                var inputNodes = document.getElementsByTagName("input");
+               
+                var val = inputNodes[0].value;
+                document.getElementById("name").innerHTML = val;
+            }
+        </script>
+        <br><br>
+
+        <!--document.forms -->
+        <form id="frm" action="ex1.html" >
+            Name: <input type="text" name="name"><br>
+            Password: <input type="password" name="password"><br>
+            <input type="submit" name="submit" value="Submit" >
+        </form> 
+
+        <p id="formElements" name="formE"></p>
+        
+        <button onclick="displayFormElements()">Display Form Elements!</button>
+        <script>
+            function displayFormElements() {
+                let x = document.forms["frm"]; // access a form called "frm"
+
+                let i, out = "";
+                // console.log(x.length);
+               for (i = 0; i < x.length ;i++) { // x.length = #elements in frm
+                    // x.elements[i] access the particular element at index i
+                    out += "<p>Type: " + x.elements[i].type + "<br>Name: "+ x.elements[i].name 
+                                + "<br>Value: " + x.elements[i].value + "</p>";
+                } 
+             
+                document.getElementById("formElements").innerHTML = out;
+            }
+        </script>
+
+        <form action="ex2.html" >
+            Search: <input type="search" name="name"><br>
+        </form>
+        <button onclick="getFormActions()">Show Form Actions!</button>
+        <p id="formActions"></p>
+        <script>
+            function getFormActions() {
+                let x = document.forms;
+                let out = "";
+                for (let i = 0; i < x.length; i++) {
+                    out = out + x[i].action + "<br>";
+                }
+                document.getElementById("formActions").innerHTML = out;
+                // console.log(out);
+            }      
+        </script>
+
+</body>
+</html>
+
+

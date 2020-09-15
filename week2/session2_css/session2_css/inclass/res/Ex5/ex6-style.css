@@ -1,0 +1,56 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    background-color: #333;
+}
+
+li{
+    display: inline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24;
+}
+
+li a{
+    color: white;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+h2{
+    color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.homediv{
+    background-color:rgb(212, 239, 248);
+    padding: 20px;
+}
+
+.regisdiv{
+    background-color: lightyellow;
+}
+
+.formstyle{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 25px;
+}
+
+/* applying style to input type text and number */
+input[type="text"], input[type="number"]{
+    border: 2px solid royalblue;
+    border-radius: 3px;
+    width: 60%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 13px;
+}
+
+input[type="number"]{
+    background-color: lightgray;
+}
+
+select{
+    background-color: yellow;
+}

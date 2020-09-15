@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (Part 2) - Accessing HTML (tag)</title>
+
+    <style>
+        div {
+            width: 80%;
+            border: 5px solid blue;
+            margin: auto;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Hello Justin</h1>
+    <h2>Justin rocks!</h2>
+
+    <div>
+        <h1>Hello Selena</h1>
+        <h2>Selena sings!</h2>
+    </div>
+    
+    <h1>
+        Hello <span style="color: purple;">Demi</span>
+    </h1>
+
+    <p>
+        Hollywood dinner tonight?
+    </p>
+
+    <script>
+
+        //======= Access all <h1> elements =======
+        console.log("=============== <h1> ===============");
+        
+        //returns a collection of h1 element objects
+        var nodes = document.getElementsByTagName("h1");
+        
+        console.log(nodes);
+
+        //nodes is a collection of Element objects
+        for(node of nodes){
+            console.log("==============================");
+            //node
+            console.log(node);
+            //innerHTML
+            console.log(node.innerHTML);
+            //innerText
+            console.log(node.innerText);
+        }
+    </script>
+</body>

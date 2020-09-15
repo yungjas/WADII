@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>Navbars</title>
+    </head>
+
+  <body>
+    <!-- NavBars -->
+    
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <!--Use any of the .bg-color classes to change the background color of the navbar 
+        (.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark and .bg-light)
+    -->
+    <!-- 
+        .navbar-expand-lg -> navbar collapse if screen size smaller than large-threshold
+        .narbar-expand-sm -> navbar wont collapse until small screen size is reached
+    -->
+    <!-- use .justify-content-center class to center the navigation bar. -->
+    <!-- e.g. <nav class="navbar navbar-expand-sm bg-light justify-content-center"> -->
+    <!-- Add a white text color to all links in the navbar with the .navbar-dark class, 
+        or use the .navbar-light class to add a black text color.-->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    
+        
+        <!-- brand -->
+        <a class="navbar-brand" href="#">Navbar</a>
+
+        <!-- 
+            Very often, especially on small screens, you want to hide the navigation links 
+            and replace them with a button that should reveal them when clicked on.
+            To create a collapsible navigation bar, use a button with class="navbar-toggler", 
+            data-toggle="collapse" and data-target="#thetarget". Then wrap the navbar content (links, etc) 
+            inside a div element with class="collapse navbar-collapse", 
+            followed by an id that matches the data-target of the button: "thetarget".
+        -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span><!-- this button appears when window size is small -->
+        </button>
+
+        <!-- a set of links including a dropdown -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                Dropdown
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" >Disabled</a>
+            </li>
+          </ul>
+
+          <!-- search -->
+          <!-- inline form, margin top-bottom size 2 -->
+          <form class="form-inline my-2"> 
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success my-2" type="submit">Search</button>
+          </form>
+        
+        </div>
+    </nav>
+  
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>

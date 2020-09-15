@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover, .dropdown:hover .dropbtn {
+            background-color: goldenrod;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">Sign Out</a></li>
+            <li style="float:right" class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Menu</a>
+                <div class="dropdown-content">
+                    <a href="#">Item 1</a>
+                    <a href="#">Item 2</a>
+                    <a href="#">Item 3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="text">
+        <h2>Navigation Bar with Dropdown Menu!</h2>
+
+        <p>Lorem Ipsum is simply dummy text of 
+            the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+            ever since the 1500s, when an unknown printer took a galley of type and 
+            scrambled it to make a type specimen book. It has survived not only five centuries, 
+            but also the leap into electronic typesetting, remaining essentially unchanged. 
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software like Aldus PageMaker 
+            including versions of Lorem Ipsum
+        </p>
+        <p>Lorem Ipsum is simply dummy text of 
+            the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+            ever since the 1500s, when an unknown printer took a galley of type and 
+            scrambled it to make a type specimen book. It has survived not only five centuries, 
+            but also the leap into electronic typesetting, remaining essentially unchanged. 
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software like Aldus PageMaker 
+            including versions of Lorem Ipsum
+        </p>
+        <ul>
+            <li><a href="#">Lorem Ipsum A</a></li>
+            <li><a href="#">Lorem Ipsum B</a></li>
+            <li><a href="#">Lorem Ipsum C</a></li>
+            <li><a href="#">Lorem Ipsum D</a></li>
+        </ul>
+    </div>
+</body>
+</html>

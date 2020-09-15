@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+        }
+
+        /* add CSS code here */
+        #divcircle{
+            background-color: goldenrod;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        
+    </style>
+
+    
+</head>
+<body>
+    
+    <h2>Changing HTML Attribute Value</h2>
+
+    <div id="div1"></div>
+
+    <button onclick="changeShape()">Make a change!</button>
+
+    <script>
+        
+       // add code here
+       var square = true;
+       
+       function changeShape(){
+           //have to put var div = document.getElementById("div1") inside if and else statements because the div's id will be changed everytime you click the button.
+           //if you place it at the beginning before your if statement, then variable div will always represent the element with an id of div1 and hence the circle will not change back to square the second time you click the button
+           if(square){
+               var div = document.getElementById("div1");
+               div.setAttribute("id", "divcircle");
+               square = false;
+           }
+           else{
+               var div = document.getElementById("divcircle");
+               div.setAttribute("id", "div1");
+               square = true;
+           }
+
+       }
+
+    </script>
+
+</body>
+</html>
