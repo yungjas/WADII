@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript (Part 2) - Event Handling</title>
+</head>
+<body onload="alert('YEET')">
+    <!-- add an onclick event -->
+    <img src="images/kim.png" onclick="foo()">
+
+    <p id="message"></p>
+
+    <!-- this is referring to this div element -->
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+        Mouse Over Me
+    </div>
+
+    <form>
+        Enter your country:
+        <input type="text" name="country">
+
+        <br>
+        Enter your name:
+        <!-- this refers to the name input element -->
+        <!-- onfocus is most commonly used in input, select and a tags -->
+        <input type="text" name="name" onfocus="kungfu(this)">
+    </form>
+
+    <h2 id="meow">
+        Mouse over this text (text color will change)
+    </h2>
+
+    <script>
+        function foo(){
+            var msg = prompt("Enter a message");
+
+            document.getElementById("message").innerText = msg;
+        }
+
+        //obj is a element object
+        function mOver(obj){
+            obj.innerHTML = "Hello Taemin";
+        }
+
+        function mOut(obj){
+            obj.innerHTML = "Bye Taemin";
+        }
+
+        function kungfu(obj){
+            obj.style.background = "yellow";
+        }
+
+        //adding event listeners
+        //we are currently mixing html with js which is messy --> eg <button onClick='myFunc()'>
+        //to tackle this we can listen to events all from js code --> allows separation of concerns and no need control over the HTML code
+        //in order words your code will be cleaner --> HTML and js are separated
+        //addEventListener attaches event handler to the element we want
+        //we can add many event handlers to one element
+        //we can also add many event handlers of the same type to one element i.e. 2 click event handlers for one element
+        var meow = document.getElementById("meow")
+
+        meow.addEventListener("mouseover", mOverAgain);
+        meow.addEventListener("mouseout", mOutAgain);
+
+        function mOverAgain(){
+            meow.style.color = "red";
+        }
+
+        function mOutAgain(){
+            meow.style.color = "black";
+        }
+    </script>
+</body>
+</html>
