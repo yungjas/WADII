@@ -45,6 +45,24 @@ function highlight_words() {
 function show_num_words() {
 
     // YOUR CODE GOES HERE
+    var para_arr_node = document.querySelectorAll("#book_chapter ul li p");
+    var span_arr_node = document.querySelectorAll("#book_chapter ul li span");
+    console.log(span_arr_node);
+    //storing count of words of each para
+    count_arr = [];
+
+    for(each_para_node of para_arr_node){
+        var para_arr = each_para_node.innerText.split("\n");
+        for(each_para of para_arr){
+            var word_arr = each_para.split(" ");
+            count_arr.push(word_arr.length);
+        }
+    }
+
+    for(i = 0; i < span_arr_node.length; i++){
+        span_arr_node[i].innerHTML = "(" + count_arr[i] + " words" + ")";
+        span_arr_node[i].style.fontWeight = "bold";
+    }
 }
 
 
