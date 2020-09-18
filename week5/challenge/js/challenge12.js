@@ -8,7 +8,35 @@
 // You may assume that all words in each paragraph are separated by one single whitespace.
 function highlight_words() {
 
-    // YOUR CODE GOES HERE
+    // YOUR CODE GOES HERE  
+    var word_len = prompt("Enter word length (words longer than this length will be highlighted for you)");
+    var result = "";
+
+    //querySelectorAll lets you find a list of Elements that match the CSS selector and puts in an array
+    //in this case, we will be getting all para elements in putting them in an array 
+    var para_arr_node = document.querySelectorAll("#book_chapter ul li p");
+    for(each_para_node of para_arr_node){
+        //split each para text into an element in an array
+        var para_arr = each_para_node.innerText.split("\n");
+        //reset the innerHTML --> removes the original html without the highlighted words, will be replaced by html with highlighted words
+        each_para_node.innerHTML = "";
+        for(each_para of para_arr){
+            var word_arr = each_para.split(" ");
+            for(each_word of word_arr){
+                if(each_word.length > word_len){
+                    result += "<span style='background-color: yellow'>" + each_word + "</span>" + " ";
+                }
+                else{
+                    result += each_word + " ";
+                }
+            }
+        }
+
+        each_para_node.innerHTML += result;
+        //reset result otherwise it will concatenate previous results to each_para_node.innerHTML
+        result = "";
+    }
+    
 }
 
 
