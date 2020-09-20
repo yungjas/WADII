@@ -71,4 +71,32 @@ function show_num_words() {
 function show_emoticons() {
 
     // YOUR CODE GOES HERE
+    var result = "";
+    var para_arr_node = document.querySelectorAll("#book_chapter ul li p");
+    for(each_para_node of para_arr_node){
+        var para_arr = each_para_node.innerText.split("\n");
+        each_para_node.innerHTML = "";
+        for(each_para of para_arr){
+            var word_arr = each_para.split(" ");
+            for(each_word of word_arr){
+                //checking if there is a comma, ? or ! in the word
+                if(each_word.indexOf(",") > -1){
+                    result += each_word.replace(",", String.fromCodePoint(0x2B50));
+                }
+                else if(each_word.indexOf("?") > -1){
+                    result += each_word.replace("?", String.fromCodePoint(0x2753));
+                }
+                else if(each_word.indexOf("!") > -1){
+                    result += each_word.replace("!", String.fromCodePoint(0x2757));
+                }
+                else{
+                    result += each_word + " ";
+                }
+            }
+        }
+
+        each_para_node.innerHTML += result;
+        result = "";
+    }
+
 }
