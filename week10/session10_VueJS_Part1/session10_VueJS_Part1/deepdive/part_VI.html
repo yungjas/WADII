@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Binding CSS Styles</title>
+    <script src="vue.js"></script>
+
+    <style>
+        /* internal css */
+        .active{
+            font-size: 40px;
+        }
+
+        .text-danger{
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p v-bind:class="{'text-danger': isActive}">{{message}}</p>
+
+        <!-- inline styling with vue, grabs fontSize variable from data and binds it to the style attribute-->
+        <!-- use actual css properties and using vue to bind it -->
+        <p v-bind:style="{'font-size': fontSize, 'background-color': bgColor}">{{message}}</p>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data:{
+                message: "Active Text Danger!",
+                //makes a css class active or not
+                isActive: true,
+                fontSize: "50px",
+                bgColor: "blue"
+            }
+        });
+    </script>
+</body>
+</html>

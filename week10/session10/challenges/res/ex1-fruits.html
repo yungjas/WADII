@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fruits</title>
+    <script type="text/javascript" src="vue.js"></script> 
+
+
+</head>
+<body>
+  <div id="app">
+    {{ message }} </br>
+    {{ var1 }} <input type="radio" name="fruit">
+    {{ var2 }} <input type="radio" name="fruit">
+    {{ var3 }} <input type="radio" name="fruit">
+
+</div>
+
+<script>
+  // Add Code Here
+  var app = new Vue({
+    el: '#app',
+    
+    data: {
+      msg: 'Choose your fav fruit',
+      var1: 'apple',
+      var2: 'orange',
+      var3: 'pear',
+    }
+  });
+</script>
+
+  <!-- challenge: add code here -->
+ 
+</body>
+</html>

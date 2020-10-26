@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computed</title>
+    <!-- directly using vue.js -->
+    <!-- for production version, use vue.min.js -->
+    <!-- we shall use development version, includes helpful console warnings -->
+    <script type="text/javascript" src="vue.js"></script> 
+
+    <style>
+        .active {
+            font-size: 40px;
+        }
+        .text-danger{
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id='app' class="m-2" v-bind:class="{'text-danger': isActive}">
+        <p> {{ message }} </p>
+
+        <button  v-if="canAdd">Add to cart</button> 
+        <button v-else disabled>Add to cart</button>
+
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: { 
+                message: "Active Text Danger!",
+                isActive: true,
+                canAdd: true
+            }
+        })
+    </script>
+
+    <!-- inline styling -->
+    <div id='app2' v-bind:style="{ 'color': activeColor, 
+        'fontSize': size}">
+        <p> {{ message }} </p>
+    </div>
+    
+    <script>
+        var vm = new Vue({
+            el: '#app2',
+            data: {
+                message: 'This is inline styling',
+                activeColor: 'red', 
+                size: '50px'
+            }
+        })
+    </script>
+    
+  
+    
+</body>
+</html>

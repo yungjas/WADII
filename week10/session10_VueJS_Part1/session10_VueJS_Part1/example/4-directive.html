@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Directive</title>
+    <!-- directly using vue.js -->
+    <!-- for production version, use vue.min.js -->
+    <!-- we shall use development version, includes helpful console warnings -->
+    <script type="text/javascript" src="vue.js"></script> 
+</head>
+
+<body>
+  <div id="app">
+    Name : {{name}} </br>
+    Phone : {{getPhone()}} </br>
+    <!-- this doesn't work -->
+    <!-- {{ message }} -->
+    <!-- use v-html directive to let Vue know 
+         that the content contains HTML code -->
+    <div v-html="message"></div>
+  </div>
+
+  <script>
+    new Vue({
+        el: '#app',
+        data: {
+            name: 'John',
+            phone: '123456',
+            message: '<p><b>Hi, I am John</b></p>'
+        },
+        methods: { 
+        getPhone: function() { 
+            return "This is my number " + this.phone; 
+            }
+        }
+    })    
+  </script>
+
+
+  <div id="app2">
+    <p v-if="seen">Now you see me</p>
+
+    <p if=false>I am seen</p>
+  </div>
+  <script>
+    new Vue({
+        el: '#app2',
+        data: {
+            seen: true
+        },
+    })  
+  </script>
+
+</body>
+</html>

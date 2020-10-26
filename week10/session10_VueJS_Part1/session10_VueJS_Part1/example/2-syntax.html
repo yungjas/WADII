@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Syntax</title>
+    <!-- directly using vue.js -->
+    <!-- for production version, use vue.min.js -->
+    <!-- we shall use development version, includes helpful console warnings -->
+    <script type="text/javascript" src="vue.js"></script> 
+</head>
+
+<body>
+  <!-- reactive DOM -->
+  <div id="app">
+    <h1> Name : {{name}} </h1> 
+    <h1> Phone : {{getPhone()}}  </h1>   
+
+    {{ 'Mr ' + name }} <br>
+    One plus two = {{ 1 + 2 }} <br>
+    Uppercase: {{ name.toUpperCase() }} <br>
+
+    <!-- v-on is a directive to listen to DOM events -->
+    <!-- in this case we are listening to btn click events -->
+    <button v-on:click="increase">Increase</button>
+    <button v-on:click="decrease">Decrease</button>
+
+    {{count}}<br><br>
+
+  </div>
+
+  <script>
+    // Vue instance
+    var vm = new Vue({
+        el: '#app',
+        data: {
+   					name: 'John',
+            phone: '123456',
+            count: 0
+        },
+        //can define more than one method
+				methods: { 
+   				getPhone: function() { 
+            return "This is my number " + this.phone; 
+          },
+          increase: function(){
+            //this refers to the current vue instance
+            this.count ++
+          },
+          decrease: function(){
+            this.count --
+          }
+				}
+    });
+  </script>
+</body>
+</html>
+
+

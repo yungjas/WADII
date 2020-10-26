@@ -1,0 +1,44 @@
+<!-- vue directives and data bindings -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue directives and conditional rendering </title>
+    <!-- directly using vue.js -->
+    <!-- for production version, use vue.min.js -->
+    <!-- we shall use development version, includes helpful console warnings -->
+    <script type="text/javascript" src="vue.js"></script> 
+</head>
+
+<body>
+  <!-- reactive DOM -->
+  <div id="app">
+    <h1>{{title}}</h1>
+    <p v-html="msg"></p>
+    
+    <a v-bind:href="link">Link</a><br><br>
+    <!-- <img v-bind:src="image"> -->
+
+    <!-- this expression will evaluate to false, the image will disappear -->
+    <!-- <img v-if="2==1" v-bind:src="image"> -->
+
+    <!-- will show the image since isTrue has a true value -->
+    <img v-if="isTrue" v-bind:src="image">
+
+    <button v-if="isTrue">Confirm</button>
+    <!-- alternative condition -->
+    <button v-else disabled>Confirm</button>
+  </div>
+
+<script>
+    // Vue instance
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello World',
+            msg: "<b>Vue is awesome!!</br>",
+            image: "./img/me.png",
+            link: "https://www.google.com/",
+            isTrue: true
+        }
+    });
+</script>

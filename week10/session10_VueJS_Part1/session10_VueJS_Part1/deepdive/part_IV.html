@@ -1,0 +1,35 @@
+<!-- vue directives and data bindings -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vue directives and data bindings </title>
+    <!-- directly using vue.js -->
+    <!-- for production version, use vue.min.js -->
+    <!-- we shall use development version, includes helpful console warnings -->
+    <script type="text/javascript" src="vue.js"></script> 
+</head>
+
+<body>
+  <!-- reactive DOM -->
+  <div id="app">
+    <h1>{{title}}</h1>
+    <!-- v-html interprets contents of a vue variable as html code -->
+    <!-- if we use v-html we don't need interpolation, i.e we don't need the {{}} -->
+    <p v-html="msg"></p>
+
+    <!-- vue cannot be an attribute value, e.g src="{{image}}", this will not work -->
+    <!-- have to use v-bind which binds an attribute value with a vue variable -->
+    <img v-bind:src="image">
+  </div>
+
+<script>
+    // Vue instance
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello World',
+            msg: "<b>Vue is awesome!!</br>",
+            image: "./img/me.png"
+        }
+    });
+</script>

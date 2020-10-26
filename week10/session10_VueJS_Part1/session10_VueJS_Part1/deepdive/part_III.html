@@ -1,0 +1,39 @@
+<!-- vue interpolation and data binding -->
+<!-- interpolation uses the {{}} -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>vue interpolation and data binding</title>
+    <!-- directly using vue.js -->
+    <!-- for production version, use vue.min.js -->
+    <!-- we shall use development version, includes helpful console warnings -->
+    <script type="text/javascript" src="vue.js"></script> 
+</head>
+
+<body>
+  <!-- reactive DOM -->
+  <div id="app">
+    <h1>{{title}}</h1>
+    
+    <input type="text" v-on:input="change_title">
+  </div>
+
+<script>
+    // Vue instance
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            title: 'Hello World'
+        },
+        //can define more than one method
+        methods: {
+            change_title: function () {
+                //will become a event object and it has a property called target
+                //also has a property called value which stores users input
+                //in this case, we are replacing the title with the user's input
+                //every time the user types something, the title will be update automatically
+                this.title = event.target.value;
+            }
+        }
+    });
+</script>

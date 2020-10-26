@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event</title>
+    <!-- directly using vue.js -->
+    <!-- for production version, use vue.min.js -->
+    <!-- we shall use development version, includes helpful console warnings -->
+    <script type="text/javascript" src="vue.js"></script> 
+</head>
+
+<body>
+    <!-- Listening to Events -->    
+    <div id="app">
+        <!-- name is the Vue variable -->
+        <input v-on:keyup.enter="hello(name)">
+        
+    </div>
+          
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'Vue',
+            },
+            methods: {
+                hello: function(name) {
+                    alert("Hello " + name)
+                    // yes of course. Alternatively
+                    // we can simply access name as follows:
+                    // alert("Hello " + this.name)
+                }
+            }
+    })
+    </script>
+
+</body>
+</html>

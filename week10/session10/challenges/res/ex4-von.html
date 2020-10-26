@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle</title>
+    <script type="text/javascript" src="vue.js"></script> 
+</head>
+
+<body>
+   <!-- add code here -->
+   <div id="app">
+       <!-- once the button is clicked, toggle will become true and the para would appear -->
+       <p v-if="toggle">{{text}}</p>
+       <!-- after the button is clicked, toggle will change from false to true -->
+       <!-- after the button is clicked for the second time, toggle will change from true to false which causes the para to disappear -->
+       <button v-on:click="toggle = !toggle">Toggle Show</button>  
+   </div>
+
+   <script>
+    // add code here
+    var app = new Vue({
+        el: '#app',
+        data: {
+            text: "Hi, now you see me!",
+            toggle: false
+        }
+    })    
+</script>
+</body>
+</html>

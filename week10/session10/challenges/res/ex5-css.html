@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClassStyleBinding</title>
+    <!-- directly using vue.js -->
+    <!-- for production version, use vue.min.js -->
+    <!-- we shall use development version, includes helpful console warnings -->
+    <script type="text/javascript" src="vue.js"></script> 
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     
+     <style>
+        .redBox {
+            background-color: red;
+        }
+        .blueBox {
+            background-color: blue;
+        }
+
+        #demo1 {
+            color: white;
+        }
+
+        .blueFont{
+            color: blue;
+        }
+
+        .redFont{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- Add code here -->
+    <div id = "app">
+        <!-- when isActive is true, will be blue, when false will be red -->
+        <div v-bind:class="{'blueBox': isActive, 'redBox': !isActive}">
+            <p v-bind:id="'demo1'">div ID: demo1</p>
+        </div>
+        <!-- isActive will keep toggling between true and false during clicks -->
+        <button v-bind:id="'demo1'" v-bind:class="{'blueBox': isActive, 'redBox': !isActive}" v-on:click="isActive = !isActive">Change color</button><br><br>
+
+        <div v-bind:class="{'blueFont': isActiveFont, 'redFont': !isActiveFont}">
+            <p>div ID: demo2</p>
+        </div>
+        <button v-bind:id="'demo1'" v-bind:class="{'blueBox': true}" v-on:click="isActiveFont = !isActiveFont">Change Text Color</button>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                isActive: true,
+                isActiveFont: true
+            }
+        })   
+    </script>
+</body>
+</html>
